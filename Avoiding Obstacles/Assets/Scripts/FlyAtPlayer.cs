@@ -7,6 +7,11 @@ public class FlyAtPlayer : MonoBehaviour
     [SerializeField] float flyingSpeed = 0.1f;
     UnityEngine.Vector3 playerPosition; // 플레이어의 위치를 나타내는 변수 (Vector3 타입의 PlayerPosition이라는 변수)
 
+    void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
     void Start()
     {
         playerPosition = player.transform.position;
